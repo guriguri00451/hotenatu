@@ -126,7 +126,7 @@ namespace StarterAssets
         }
 
 
-        private void Awake()
+        private void ChangeCamera()
         {
             // get a reference to our main camera
             if (_mainCamera == null)
@@ -159,6 +159,7 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
+            ChangeCamera();
             JumpAndGravity();
             GroundedCheck();
             Move();
